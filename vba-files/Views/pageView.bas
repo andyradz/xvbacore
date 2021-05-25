@@ -10,9 +10,9 @@ Attribute VB_Name = "pageView"
 '
 '@return void
 '*/
-Public  Sub publish()
+Public Sub publish()
 
-  'XVBA auto-complete just work with namespace like "Alert"  
+  'XVBA auto-complete just work with namespace like "Alert"
   Call Alert.Show
     
 End Sub

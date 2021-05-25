@@ -11,7 +11,7 @@ Attribute VB_Name = "Alert"
 '
 '@return void
 '*/
-Public  Sub Show()
-  Call Xlog.message(0,"Run Alert Show Sub")
-  MsgBox "Alert",,"title" 
+Public Sub Show()
+  Call Xlog.message(0, "Run Alert Show Sub")
+  MsgBox "Alert", , "title"
 End Sub

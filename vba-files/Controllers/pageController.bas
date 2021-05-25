@@ -11,9 +11,9 @@ Attribute VB_Name = "pageController"
 '
 '@return void
 '*/
-Public  Sub index()
+Public Sub index()
 
-  'XVBA auto-complete just work with namespace like "pageView"  
+  'XVBA auto-complete just work with namespace like "pageView"
   Call pageView.publish
 End Sub
   

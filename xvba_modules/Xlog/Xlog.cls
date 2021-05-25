@@ -8,10 +8,12 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
+
+'Andrzej Radziszewski
 Option Explicit
 
 
-'namespace=xvba_modules\Xlog
+'namespace = xvba_modules\Xlog
 
 
 
@@ -26,7 +28,7 @@ Option Explicit
 Private param As String
 
 Private Sub class_initialize()
-  param = Application.ThisWorkbook.Path  & "\app.log"
+  param = Application.ThisWorkbook.Path & "\app.log"
 End Sub
 
 
@@ -34,15 +36,15 @@ End Sub
 '
 'Set Log Message
 '
-'@param[Integer] messageType 
+'@param[Integer] messageType
 '@param["String"] messageText
 '@param[String] filePath
 '*/
-Public Function message(messageType As Integer, messageText As String,Optional filePath)
+Public Function message(messageType As Integer, messageText As String, Optional filePath)
  
   If IsMissing(filePath) Then
     filePath = param
-  End if 
+  End If
   Dim FileNum As Integer
   
   FileNum = FreeFile
@@ -79,7 +81,7 @@ Public Function ErrorHandller(filePath As String, macro As String)
   messageLog = Err.Description & "  [" & Err.Number & "] Macro:" & macro
    
   Call LogMessages(0, filePath, messageLog)
-  ThisWorkbook.Close SaveChanges:=False
+  ThisWorkbook.Close SaveChanges: = False
   
 End Function
   
